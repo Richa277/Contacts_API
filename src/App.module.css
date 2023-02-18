@@ -4,4 +4,8 @@
   flex-direction: column;
   justify-content: center;
   font-size: 1.5rem;
+  margin-bottom: 4rem;
+}
+.h2 {
+  color: blue;
 }
