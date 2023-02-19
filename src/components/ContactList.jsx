@@ -13,13 +13,15 @@ import styles from "./ContactList.module.css";
 
 function ContactList() {
   const [data, setData] = useState([]);
-  // const [value,setValue]=useState({});  change it
-  useEffect(()=>{
 
-   
-    console.log( fetchData("/api/contacts"),"hh");
-  })
- 
+  useEffect(() => {
+    const token = fetchData("/api/contacts");
+
+    token.then(function (result) {
+      setData(result);
+    });
+  }, []);
+
   return (
     <Container align="center">
       {data?.length === 0 ? (
@@ -39,7 +41,7 @@ function ContactList() {
             {data.map((val, key) => {
               return (
                 <TableRow key={key} bgcolor="lightyellow">
-                  <TableCell>{val?.id}</TableCell>
+                  <TableCell>{val?.id + 1}</TableCell>
                   <TableCell>{val?.firstName}</TableCell>
                   <TableCell>{val?.lastName}</TableCell>
                 </TableRow>
