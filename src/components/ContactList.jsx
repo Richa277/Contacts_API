@@ -32,9 +32,15 @@ function ContactList() {
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell className={styles.head} bgcolor="lightgrey">ID</TableCell>
-              <TableCell className={styles.head} bgcolor="lightgrey">FirstName</TableCell>
-              <TableCell className={styles.head} bgcolor="lightgrey">LastName</TableCell>
+              <TableCell className={styles.head} bgcolor="lightgrey">
+                ID
+              </TableCell>
+              <TableCell className={styles.head} bgcolor="lightgrey">
+                FirstName
+              </TableCell>
+              <TableCell className={styles.head} bgcolor="lightgrey">
+                LastName
+              </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -42,8 +48,8 @@ function ContactList() {
               return (
                 <TableRow key={key} bgcolor="lightyellow">
                   <TableCell className={styles.row}>{val?.id + 1}</TableCell>
-                  <TableCell className={styles.row} >{val?.firstName}</TableCell>
-                  <TableCell className={styles.row} >{val?.lastName}</TableCell>
+                  <TableCell className={styles.row}>{val?.firstName}</TableCell>
+                  <TableCell className={styles.row}>{val?.lastName}</TableCell>
                 </TableRow>
               );
             })}
