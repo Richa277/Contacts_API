@@ -1,3 +1,13 @@
 .loader {
   margin-top: 12rem;
 }
+.row {
+  text-align: center;
+  font-size: medium;
+  font-weight: 400;
+}
+.head {
+  text-align: center;
+  font-size: large;
+  font-weight: 600;
+}

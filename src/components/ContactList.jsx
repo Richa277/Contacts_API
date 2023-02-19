@@ -2,7 +2,7 @@ import {
   Container,
   TableBody,
   TableCell,
-  TableContainer,
+  Table,
   TableHead,
   TableRow,
 } from "@material-ui/core";
@@ -29,26 +29,26 @@ function ContactList() {
           <Loader bgColor="green" size={100} />
         </div>
       ) : (
-        <TableContainer className={styles.table}>
+        <Table>
           <TableHead>
-            <TableRow className={styles.row}>
-              <TableCell bgcolor="lightgrey">ID</TableCell>
-              <TableCell bgcolor="lightgrey">FirstName</TableCell>
-              <TableCell bgcolor="lightgrey">LastName</TableCell>
+            <TableRow>
+              <TableCell className={styles.head} bgcolor="lightgrey">ID</TableCell>
+              <TableCell className={styles.head} bgcolor="lightgrey">FirstName</TableCell>
+              <TableCell className={styles.head} bgcolor="lightgrey">LastName</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
             {data.map((val, key) => {
               return (
                 <TableRow key={key} bgcolor="lightyellow">
-                  <TableCell>{val?.id + 1}</TableCell>
-                  <TableCell>{val?.firstName}</TableCell>
-                  <TableCell>{val?.lastName}</TableCell>
+                  <TableCell className={styles.row}>{val?.id + 1}</TableCell>
+                  <TableCell className={styles.row} >{val?.firstName}</TableCell>
+                  <TableCell className={styles.row} >{val?.lastName}</TableCell>
                 </TableRow>
               );
             })}
           </TableBody>
-        </TableContainer>
+        </Table>
       )}
     </Container>
   );
