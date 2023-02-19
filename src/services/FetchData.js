@@ -1,8 +1,7 @@
 import axios from "axios";
 export const fetchData = (url) => {
-
-   axios.get(url).then((res) => {
-    console.log(res.data,"sd,sdvls,l")
+  let result = axios.get(url).then((res) => {
     return res?.data;
-  })
+  });
+  return result;
 };
