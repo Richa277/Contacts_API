@@ -24,7 +24,7 @@ function ContactList() {
 
   return (
     <Container align="center">
-      {data?.length === 0 ? (
+      {data.length === 0 ? (
         <div className={styles.loader}>
           <Loader bgColor="green" size={100} />
         </div>
