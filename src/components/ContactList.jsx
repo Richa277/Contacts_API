@@ -5,8 +5,8 @@ import {
   Table,
   TableHead,
   TableRow,
+  CircularProgress,
 } from "@material-ui/core";
-import { CircularProgress } from "@material-ui/core";
 import { useEffect, useState } from "react";
 import { fetchData } from "../services/FetchData";
 import styles from "./ContactList.module.css";
