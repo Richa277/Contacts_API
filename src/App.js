@@ -3,7 +3,7 @@ import styles from "./App.module.css";
 function App() {
   return (
     <div className={styles.App}>
-      <h2 className={styles.h2}>Contacts</h2>
+      <h2 className={styles.title}>Contacts</h2>
       <ContactList />
     </div>
   );

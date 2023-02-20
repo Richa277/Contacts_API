@@ -1,12 +1,12 @@
 .loader {
   margin-top: 12rem;
 }
-.row {
+.TableData {
   text-align: center;
   font-size: medium;
   font-weight: 400;
 }
-.head {
+.TableHead {
   text-align: center;
   font-size: large;
   font-weight: 600;
