@@ -15,9 +15,9 @@ function ContactList() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const token = fetchData("/api/contacts");
+    const result = fetchData("/api/contacts");
 
-    token.then(function (result) {
+    result.then(function (result) {
       setData(result);
     });
   }, []);
