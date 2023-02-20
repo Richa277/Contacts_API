@@ -6,7 +6,7 @@ import {
   TableHead,
   TableRow,
 } from "@material-ui/core";
-import Loader from "react-js-loader";
+import { CircularProgress } from "@material-ui/core";
 import { useEffect, useState } from "react";
 import { fetchData } from "../services/FetchData";
 import styles from "./ContactList.module.css";
@@ -26,7 +26,7 @@ function ContactList() {
     <Container align="center">
       {data.length === 0 ? (
         <div className={styles.loader}>
-          <Loader bgColor="green" size={100} />
+          <CircularProgress color="success" />
         </div>
       ) : (
         <Table>
@@ -47,9 +47,7 @@ function ContactList() {
             {data.map((val, key) => {
               return (
                 <TableRow key={key} bgcolor="lightyellow">
-                  <TableCell className={styles.tableData}>
-                    {val?.id + 1}
-                  </TableCell>
+                  <TableCell className={styles.tableData}>{val?.id}</TableCell>
                   <TableCell className={styles.tableData}>
                     {val?.firstName}
                   </TableCell>
