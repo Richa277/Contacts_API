@@ -26,7 +26,7 @@ function ContactList() {
     <Container align="center">
       {data.length === 0 ? (
         <div className={styles.loader}>
-          <CircularProgress color="success" />
+          <CircularProgress />
         </div>
       ) : (
         <Table>
@@ -44,9 +44,9 @@ function ContactList() {
             </TableRow>
           </TableHead>
           <TableBody>
-            {data.map((val, key) => {
+            {data.map((val) => {
               return (
-                <TableRow key={key} bgcolor="lightyellow">
+                <TableRow key={val.id} bgcolor="lightyellow">
                   <TableCell className={styles.tableData}>{val?.id}</TableCell>
                   <TableCell className={styles.tableData}>
                     {val?.firstName}
