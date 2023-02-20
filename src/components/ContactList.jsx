@@ -32,13 +32,13 @@ function ContactList() {
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell className={styles.TableHead} bgcolor="lightgrey">
+              <TableCell className={styles.tableHead} bgcolor="lightgrey">
                 ID
               </TableCell>
-              <TableCell className={styles.TableHead} bgcolor="lightgrey">
+              <TableCell className={styles.tableHead} bgcolor="lightgrey">
                 FirstName
               </TableCell>
-              <TableCell className={styles.TableHead} bgcolor="lightgrey">
+              <TableCell className={styles.tableHead} bgcolor="lightgrey">
                 LastName
               </TableCell>
             </TableRow>
@@ -47,9 +47,15 @@ function ContactList() {
             {data.map((val, key) => {
               return (
                 <TableRow key={key} bgcolor="lightyellow">
-                  <TableCell className={styles.TableData}>{val?.id + 1}</TableCell>
-                  <TableCell className={styles.TableData}>{val?.firstName}</TableCell>
-                  <TableCell className={styles.TableData}>{val?.lastName}</TableCell>
+                  <TableCell className={styles.tableData}>
+                    {val?.id + 1}
+                  </TableCell>
+                  <TableCell className={styles.tableData}>
+                    {val?.firstName}
+                  </TableCell>
+                  <TableCell className={styles.tableData}>
+                    {val?.lastName}
+                  </TableCell>
                 </TableRow>
               );
             })}
