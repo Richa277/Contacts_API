@@ -26,10 +26,10 @@ function ContactList() {
     <Container align="center">
       {data.length === 0 ? (
         <div className={styles.loader}>
-          <CircularProgress />
+          <CircularProgress/>
         </div>
       ) : (
-        <Table>
+        <Table border="solid" borderColor="green">
           <TableHead>
             <TableRow>
               <TableCell className={styles.tableHead} bgcolor="lightgrey">
