@@ -19,6 +19,7 @@ function ContactList() {
 
     result.then(function (result) {
       setData(result);
+      
     });
   }, []);
 
